@@ -63,4 +63,19 @@ router.get("/", (req, res) => {
     });
 })
 
+router.get('/register', (req, res) => {
+    console.log(users)
+    res.render('register')
+})
+
+router.post('/user', (req, res) => {
+    const { name, email, pass} = req.body;
+
+    console.log({name, email, pass})
+
+    users.push({name, email, pass})
+
+    res.render('register', { registroExitoso: true})
+})
+
 export default router;

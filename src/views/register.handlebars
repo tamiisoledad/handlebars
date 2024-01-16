@@ -1,0 +1,17 @@
+<form action="/user" method="post">
+    <label for="name">Nombre</label>
+    <input type="text" name="name">
+    <br>
+    <label for="email">correo</label>
+    <input type="email" name="email">
+    <br>
+    <label for="pass">contraseña</label>
+    <input type="password" name="pass">
+    <br>
+
+    <button type="submit">Enviar</button>
+
+    {{#if registroExitoso}}
+        <p>Registro exitoso!!!!</p>
+    {{/if}}
+</form>
