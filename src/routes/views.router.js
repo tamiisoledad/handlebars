@@ -78,4 +78,8 @@ router.post('/user', (req, res) => {
     res.render('register', { registroExitoso: true})
 })
 
+router.get('/socket', (req, res) => {
+  res.render('socket')
+})
+
 export default router;
